@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        
+        <div>
+            <ul class="nav justify-content-end shadow-lg p-3 mb-5 bg-white rounded">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="categories">Magazin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login">Login</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <form action="/register-action" >
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input name="name"type="text" class="form-control" id="name" placeholder="Enter name">
+                </div>
+                <div class="username">
+                    <label for="username">User name</label>
+                    <input name="username" type="text" class="form-control" id="username" placeholder="Enter username">
+                </div>
+                <div class="form-group" >
+                    <label for="email">Email address</label>
+                    <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input name="address" type="text" class="form-control" id="address" placeholder="Enter address">
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        
+        <div>
+            <ul class="nav justify-content-end shadow-lg p-3 mb-5 bg-white rounded">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout">Logout</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="show-cart" th:text="${nr_product}"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div th:each="c: ${categories}" class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <img style="height: 200px" th:src="${c.photo}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 th:text="${c.name}" class="card-title"></h5>
+                            <p th:text="${c.description}" class="card-text"></p>
+                            <a th:href="@{/products?category_id=} + ${c.id}" class="btn btn-primary">Vezi toate</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    
+
+  
+
+    </body>
+
+</html>
